@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crop Diagnosis App</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="#" onclick="showHome()">Crop Diagnosis App</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="#" onclick="showDiagnoseScreen()">Diagnose</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#" onclick="showHistoryScreen()">History</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#" onclick="showSettingsScreen()">Settings</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#" onclick="showProfileScreen()">Profile</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#" onclick="showAboutScreen()">About</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container">
+        <div id="homeScreen" class="card">
+            <div class="card-body">
+                <h2 class="card-title">Welcome to Crop Diagnosis App</h2>
+                <p class="card-text">Choose an option from the navigation bar.</p>
+            </div>
+        </div>
+
+        <div id="diagnoseScreen" style="display: none;">
+            <div class="card">
+                <div class="card-body">
+                    <label for="cropSelect">Select Crop:</label>
+                    <select id="cropSelect" class="form-control">
+                        <option value="tomato">Tomato</option>
+                        <option value="potato">Potato</option>
+                        <!-- Add more crop options as needed -->
+                    </select>
+                    <label for="imageInput">Upload an image of the crop:</label>
+                    <input type="file" id="imageInput" class="form-control" accept="image/*">
+                    <button class="btn btn-primary" onclick="diagnose()">Diagnose</button>
+                    <div id="result"></div>
+                    <button class="btn btn-secondary" onclick="showHome()">Back to Home</button>
+                </div>
+            </div>
+        </div>
+
+        <div id="historyScreen" style="display: none;">
+            <div class="card">
+                <div class="card-body">
+                    <h2 class="card-title">Diagnosis History</h2>
+                    <ul id="historyList" class="list-group"></ul>
+                    <button class="btn btn-secondary" onclick="showHome()">Back to Home</button>
+                </div>
+            </div>
+        </div>
+
+        <div id="settingsScreen" style="display: none;">
+            <div class="card">
+                <div class="card-body">
+                    <h2 class="card-title">Settings</h2>
+                    <div id="dynamicSettings"></div>
+                    <button class="btn btn-secondary" onclick="showHome()">Back to Home</button>
+                </div>
+            </div>
+        </div>
+
+        <div id="profileScreen" style="display: none;">
+            <div class="card">
+                <div class="card-body">
+                    <h2 class="card-title">User Profile</h2>
+                    <div id="userProfile"></div>
+                    <button class="btn btn-secondary" onclick="showHome()">Back to Home</button>
+                </div>
+            </div>
+        </div>
+
+        <div id="aboutScreen" style="display: none;">
+            <div class="card">
+                <div class="card-body">
+                    <h2 class="card-title">About Crop Diagnosis App</h2>
+                    <p class="card-text">Crop Diagnosis App is designed to help farmers identify and manage crop diseases effectively. It uses advanced image processing techniques to analyze crop images and provide accurate diagnoses.</p>
+                    <button class="btn btn-secondary" onclick="showHome()">Back to Home</button>
+                </div>
+            </div>
+        </div>
+
+        <div id="notificationAlert"></div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

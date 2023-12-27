@@ -1,0 +1,90 @@
+body {
+    background-color: #ffff00; /* Light Blue */
+    padding-top: 20px;
+}
+
+.container {
+    margin-top: 20px;
+}
+
+.card {
+    margin-bottom: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: #f5f5f5; /* Silver */
+}
+
+.btn {
+    margin-top: 10px;
+}
+
+select {
+    margin-bottom: 10px;
+}
+
+.navbar {
+    background-color: #87cefa; /* LightSkyBlue */
+}
+
+.navbar-brand,
+.navbar-nav .nav-link {
+    color: #333333; /* DarkSlateGray */
+}
+
+.navbar-brand:hover,
+.navbar-nav .nav-link:hover {
+    color: #ffffff; /* White */
+}
+
+.navbar-toggler-icon {
+    background-color: #333333; /* DarkSlateGray */
+}
+
+.card-title {
+    color: #333333; /* DarkSlateGray */
+}
+
+.card-text {
+    color: #555555; /* DimGray */
+}
+
+.form-check-label {
+    color: #555555; /* DimGray */
+}
+
+.btn-primary {
+    background-color: #4CAF50; /* Green */
+    border: none;
+}
+
+.btn-primary:hover {
+    background-color: #45a049; /* Darker Green */
+}
+
+.btn-secondary {
+    background-color: #3498db; /* DodgerBlue */
+    border: none;
+    margin-right: 10px;
+}
+
+.btn-secondary:hover {
+    background-color: #2980b9; /* Darker Blue */
+}
+
+.list-group-item {
+    background-color: #ffffff; /* White */
+    border: 1px solid #e0e0e0; /* LightGray */
+}
+
+.alert {
+    margin-top: 20px;
+}
+
+.alert-success {
+    background-color: #d4edda; /* Greenish */
+    color: #155724; /* Dark Green */
+}
+
+.alert-danger {
+    background-color: #f8d7da; /* Pinkish */
+    color: #721c24; /* Dark Red */
+}
